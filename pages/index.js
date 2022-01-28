@@ -1,5 +1,5 @@
 import Head from 'next/head'
-
+import Image from 'next/image'
 const TWITTER_HANDLE = "akvashi24"
 const TWITTER_LINK = "https://twitter.com/akvashi24"
 
@@ -12,27 +12,29 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="bg-zinc-900 h-screen overflow-scroll text-center">
-        <div className="h-full bg-zinc-900 flex flex-col justify-between">
-          <div className="pt-8 bg-zinc-900 text-center">
+      <div className="h-screen text-center bg-zinc-900">
+        <div className="flex flex-col justify-between h-full bg-zinc-900">
+          <div className="pt-8 text-center bg-zinc-900">
             <div className="mb-4">
               <span className={"bg-gradient-to-br text-center from-cyan-400 to-purple-500 bg-clip-text text-transparent text-6xl font-black mb-8"}>Next.js Starterpack</span>
             </div>
             <div className="w-1/2 mx-auto overflow-wrap">
-              <p className="font-2xl text-zinc-100 mb-4">
+              <p className="mb-4 font-2xl text-zinc-100">
                 Comes with:
               </p>
-              <ul className="text-white mb-4 font-semibold">
+              <ul className="mb-4 font-semibold text-white">
                 <li>Next.js</li>
                 <li>Tailwindcss</li>
               </ul>
-              <span className="text-white">That's it for now!</span>
+              <span className="text-white">That&apos;s it for now!</span>
             </div>
           </div>
-          <div className="flex justify-center items-center pt-4">
-            <img alt="Twitter Logo" className="h-7 w-7" src="/icons/twitter-logo.svg" />
+          <div className="flex items-center justify-center pt-4">
+            <div className='h-7 w-7'>
+              <Image alt="Twitter Logo" className="h-7 w-7" height="25px" width="25px" src="/icons/twitter-logo.svg" />
+            </div>
             <a
-              className="text-zinc-100 font-semibold decoration-cyan-400"
+              className="font-semibold text-zinc-100 decoration-cyan-400"
               href={TWITTER_LINK}
               target="_blank"
               rel="noreferrer"
